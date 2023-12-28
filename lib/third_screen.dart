@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ThirdScreen extends StatelessWidget {
-  // Data dummy untuk contoh, gantikan dengan data yang diambil dari API.
+  
   final List<Map<String, dynamic>> users = List.generate(
     10,
     (index) => {
@@ -18,14 +18,14 @@ class ThirdScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Third Screen',style: TextStyle(color: Colors.black)),
         backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: Colors.black),
-        elevation: 0, // Menghilangkan shadow
+        iconTheme: const IconThemeData(color: Colors.black),
+        elevation: 0, 
       ),
       body: ListView.builder(
         itemCount: users.length,
         itemBuilder: (context, index) {
           return Card(
-            margin: EdgeInsets.all(8.0),
+            margin: const EdgeInsets.all(8.0),
             child: ListTile(
               leading: CircleAvatar(
                 backgroundImage: NetworkImage(users[index]['avatarUrl']),

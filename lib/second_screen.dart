@@ -12,39 +12,39 @@ class SecondScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Second Screen',style: TextStyle(color: Colors.black)),
         backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: Colors.black),
-        elevation: 0, // Menghilangkan shadow
+        iconTheme: const IconThemeData(color: Colors.black),
+        elevation: 0, 
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 100), // Atur sesuai dengan jarak pada gambar
-            Text(
+            const SizedBox(height: 100), 
+            const Text(
               'Welcome',
               style: TextStyle(
-                fontSize: 24, // Ukuran font Welcome
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Text(
               name,
-              style: TextStyle(
-                fontSize: 24, // Ukuran font nama
+              style: const TextStyle(
+                fontSize: 24, 
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 16), // Jarak antara teks welcome dan nama
-            Text(
+            const SizedBox(height: 16), 
+            const Text(
               'Selected User Name',
               style: TextStyle(
-                fontSize: 18, // Ukuran font Selected User Name
-                color: Colors.grey, // Warna font
+                fontSize: 18, 
+                color: Colors.grey, 
               ),
             ),
-            SizedBox(height: 24), // Jarak antara teks dan tombol
+            const SizedBox(height: 24),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: ElevatedButton(
                 child: Text('Choose a User'),
                 style: ElevatedButton.styleFrom(
@@ -53,7 +53,7 @@ class SecondScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
-                  minimumSize: Size(double.infinity, 50), // Lebar dan tinggi tombol
+                  minimumSize: const Size(double.infinity, 50), 
                 ),
                 onPressed: () {
                   Navigator.push(
